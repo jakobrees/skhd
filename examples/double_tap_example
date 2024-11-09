@@ -1,0 +1,15 @@
+# Mode definitions with notifications
+:: default : 
+
+# Remove the @ to allow normal typing in shadow mode
+:: shadow : 
+
+# Mode switching
+default < ctrl - escape ; shadow
+shadow < ctrl - escape ; default
+
+# Terminal Launching script
+default < ctrl - t : open -a Terminal --fresh
+
+# LLM launching script
+default < lcmd_lcmd : ${HOME}/.skhd_scripts/launch_llm.sh
